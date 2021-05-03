@@ -1,6 +1,6 @@
 # JavaScript Practices
 
-These projects have been prepared from scratch after watching the [Build 15 JavaScript Projects - Vanilla JavaScript Course](https://www.youtube.com/watch?v=3PHXvlpOkf4&t=1827s) created by John Smilga.
+These projects have been prepared from scratch after watching the [Build 15 JavaScript Projects - Vanilla JavaScript Course](https://www.youtube.com/watch?v=3PHXvlpOkf4) created by John Smilga.
 
 **Projects**
 - Color Flipper
@@ -64,7 +64,7 @@ Did you found a bug or got an idea for a new feature? Feel free to use the [issu
 
 ## Credits
 
-[Build 15 JavaScript Projects - Vanilla JavaScript Course by John Smilga](https://www.youtube.com/watch?v=3PHXvlpOkf4&t=1827s)
+[Build 15 JavaScript Projects - Vanilla JavaScript Course by John Smilga](https://www.youtube.com/watch?v=3PHXvlpOkf4)
 
 ## License
 
