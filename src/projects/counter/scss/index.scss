@@ -1,0 +1,58 @@
+body {
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	letter-spacing: var(--letter-spacing);
+	background-color: var(--color-bg);
+	color: var(--color-primary);
+}
+
+.counter {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__title {
+		font-size: 3rem;
+		margin-bottom: .25em;
+	}
+
+	&__value {
+		font-size: 6rem;
+	}
+
+	&__button__wrapper {
+		display: grid;
+		row-gap: 1em;
+		padding-top: .75em;
+
+		@include mq() {
+			grid-template-rows: none;
+			grid-template-columns: repeat(3, auto);
+			column-gap: 1em;
+			row-gap: 0;
+		}
+	}
+
+	&__button {
+		font-size: .875rem;
+		text-transform: uppercase;
+		padding: .428em .857em;
+		background-color: transparent;
+		letter-spacing: var(--letter-spacing);
+		border: 2px solid var(--color-black);
+		border-radius: var(--border-radius);
+		box-shadow: var(--box-shadow);
+		cursor: pointer;
+		transition: all .3s;
+
+		&:hover {
+			color: #FFF;
+			background-color: var(--color-black);
+		}
+	}
+}

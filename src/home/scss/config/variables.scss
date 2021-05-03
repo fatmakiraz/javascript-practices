@@ -1,0 +1,16 @@
+:root {
+	--font-family: 'Manrope', sans-serif;
+	--font-size: .88rem;
+	--font-semibold: 600;
+	--font-medium: 500;
+	--color-primary:#8c30f5;
+	--color-bg: #F6FAFF;
+	--container-width: 642px;
+	--header-height: 4.75em;
+	--box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--border-radius: 0.5em;
+
+	@include mq() {
+		--font-size: 1rem;
+	}
+}

@@ -1,0 +1,146 @@
+body {
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+}
+
+.icon {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+
+	&-video {
+		width: 1.5em;
+		height: 1.5em;
+	}
+}
+
+.header {
+	background-color: var(--color-primary);
+	color: #FFF;
+	height: var(--header-height);
+	padding: 3.5em 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	@include mq('desktop') {
+		flex-direction: row;
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-right: 10em;
+		padding-left: 10em;
+		justify-content: space-between;
+	}
+
+	&__title {
+		font-weight: var(--font-semibold);
+		margin-bottom: .4em;
+
+		@include mq('desktop') {
+			margin-bottom: 0;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		opacity: .85;
+		transition: .2s;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&+& {
+			margin-left: 2em;
+		}
+
+		&__wrapper {
+			display: flex;
+		}
+
+		&__item {
+			display: flex;
+			align-items: center;
+
+
+			&+& {
+				margin-left: .5em;
+			}
+		}
+
+	}
+}
+
+.container {
+	width: var(--container-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.showcase {
+	background-color: var(--color-bg);
+	min-height: calc(100vh - var(--header-height));
+	display: flex;
+	padding: 3em 1em;
+
+	@include mq() {
+		padding: 0;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+
+		@include mq() {
+			justify-content: space-around;
+			height: 100%;
+		}
+	}
+
+	&__projects {
+		display: grid;
+		gap: 2em 2em;
+		margin-bottom: 3em;
+
+		@include mq() {
+			grid-template-columns: repeat(2, 1fr);
+			margin-bottom: 0;
+		}
+
+		&__item {
+			font-weight: var(--font-medium);
+			background-color: var(--color-primary);
+			box-shadow: var(--box-shadow);
+			padding: 1em 2em;
+			color: #FFF;
+			text-align: center;
+			border-radius: var(--border-radius);
+			opacity: 1;
+			transition: .2s;
+
+			&:hover {
+				opacity: .85;
+			}
+		}
+	}
+
+	&__desc {
+		display: flex;
+		font-weight: var(--font-medium);
+
+		&__link {
+			color: var(--color-primary);
+			opacity: 1;
+			transition: .2s;
+
+			&:hover {
+				opacity: .85;
+				text-decoration: underline;
+			}
+		}
+	}
+}
