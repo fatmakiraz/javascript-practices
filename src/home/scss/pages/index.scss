@@ -37,7 +37,7 @@ body {
 	}
 
 	&__title {
-		font-weight: var(--font-semibold);
+		font-weight: var(--font-medium);
 		margin-bottom: .4em;
 
 		@include mq('desktop') {
