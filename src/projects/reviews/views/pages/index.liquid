@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="JavaScript- Counter">
+	<title>Reviews</title>
+	<link rel="icon" href="/img/favicon.png">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<defs>
+			<symbol id="icon-quote-right" viewBox="0 0 26 28">
+				<path d="M12 5v11c0 4.406-3.594 8-8 8h-1c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h1c2.203 0 4-1.797 4-4v-0.5c0-0.828-0.672-1.5-1.5-1.5h-3.5c-1.656 0-3-1.344-3-3v-6c0-1.656 1.344-3 3-3h6c1.656 0 3 1.344 3 3zM26 5v11c0 4.406-3.594 8-8 8h-1c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h1c2.203 0 4-1.797 4-4v-0.5c0-0.828-0.672-1.5-1.5-1.5h-3.5c-1.656 0-3-1.344-3-3v-6c0-1.656 1.344-3 3-3h6c1.656 0 3 1.344 3 3z"></path>
+			</symbol>
+			<symbol id="icon-angle-left" viewBox="0 0 11 28">
+				<path d="M9.797 8.5c0 0.125-0.063 0.266-0.156 0.359l-6.141 6.141 6.141 6.141c0.094 0.094 0.156 0.234 0.156 0.359s-0.063 0.266-0.156 0.359l-0.781 0.781c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-7.281-7.281c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l7.281-7.281c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l0.781 0.781c0.094 0.094 0.156 0.219 0.156 0.359z"></path>
+			</symbol>
+			<symbol id="icon-angle-right" viewBox="0 0 9 28">
+				<path d="M9.297 15c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-0.781-0.781c-0.094-0.094-0.156-0.219-0.156-0.359 0-0.125 0.063-0.266 0.156-0.359l6.141-6.141-6.141-6.141c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l7.281 7.281c0.094 0.094 0.156 0.234 0.156 0.359z"></path>
+			</symbol>
+		</defs>
+	</svg>
+	<main class="reviews">
+		<div class="container">
+			<h1 class="reviews__title">Our Reviews</h1>
+			<div class="reviews__card">
+				<div class="reviews__card__image">
+					<figure class="reviews__card__image__avatar">
+						<img class="js-img" src="img/person-1.jpg" alt="Person İmage">
+					</figure>
+					<div class="reviews__card__image__icon">
+						<svg class="icon icon-quote-right">
+							<use xlink:href="#icon-quote-right"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="reviews__card__author">
+					<div class="reviews__card__author__name js-name">Susan Smith</div>
+					<div class="reviews__card__author__job js-job">Web Developer</div>
+				</div>
+				<p class="reviews__card__comment js-comment">I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry</p>
+				<div class="reviews__card__buttons">
+					<button type="button" class="button reviews__card__button js-btnPrev">
+						<svg class="icon icon-angle-left">
+							<use xlink:href="#icon-angle-left"></use>
+						</svg>
+					</button>
+					<button type="button" class="button reviews__card__button js-btnNext">
+						<svg class="icon icon-angle-right">
+							<use xlink:href="#icon-angle-right"></use>
+						</svg>
+					</button>
+				</div>
+				<button type="button" class="button reviews__card__random-button js-randomBtn">Surprise Me</button>
+			</div>
+		</div>
+	</main>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>
