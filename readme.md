@@ -5,6 +5,8 @@ These projects have been prepared from scratch after watching the [Build 15 Java
 **Projects**
 - Color Flipper
 - Counter
+- Reviews
+- Navbar
 
 > :warning: **All of the 15 projects will be made. This repository will be updated as the projects have been completed.**
 

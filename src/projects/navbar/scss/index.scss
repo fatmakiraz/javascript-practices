@@ -1,0 +1,157 @@
+body {
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	background-color: var(--color-bg);
+	color: var(--color-primary);
+}
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+	color: var(--color-blue);
+	transition: .3s;
+
+	&:hover {
+		opacity: .7;
+	}
+
+	&-menu {
+		width: 1.5em;
+		height: 1.5em;
+	}
+}
+
+.button {
+	background-color: transparent;
+}
+
+.header {
+	background-color: #FFF;
+	box-shadow: var(--box-shadow);
+	padding: 1em;
+	position: relative;
+	transition: var(--transition);
+
+	&__toggle {
+		display: block;
+		transition: var(--transition);
+
+		@include mq() {
+			display: none;
+		}
+
+	}
+
+	&.js-is-show {
+		box-shadow: none;
+
+		.header__menu {
+			transform: translateY(0);
+			top: 100%;
+		}
+
+		.header__toggle {
+			transform: rotate(90deg);
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+
+		@include mq() {
+			display: grid;
+			grid-template-columns: repeat(3, auto);
+			align-items: center;
+			max-width: var(--max-width);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__logo {
+		height: 40px;
+
+		img {
+			height: 100%;
+		}
+	}
+
+	&__menu {
+		position: absolute;
+		top: 0;
+		background-color: #FFF;
+		width: 100%;
+		left: 0;
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		transform: translateY(-100%);
+		transition: var(--transition);
+		z-index: -1;
+
+		@include mq() {
+			position: static;
+			background-color: transparent;
+			display: block;
+			padding: 0;
+			transform: translateY(0);
+			z-index: 1;
+		}
+
+		&__link {
+			letter-spacing: var(--letter-spacing);
+			padding: 0.5em 1em;
+			transition: .3s linear;
+
+			@include mq() {
+				padding: 0;
+			}
+
+			&:hover {
+				background-color: #a5d5f8;
+				color: var(--color-blue);
+				padding-left: 1.5em;
+
+				@include mq() {
+					background-color: transparent;
+					color: currentColor;
+					padding-left: 0;
+				}
+			}
+
+			&+& {
+				margin-top: 1em;
+
+				@include mq() {
+					margin-left: 1em;
+				}
+			}
+		}
+	}
+
+	&__social__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__social {
+		display: none;
+
+		@include mq() {
+			display: block;
+		}
+
+		&__icon {
+
+			&+& {
+				margin-left: .5em;
+			}
+		}
+	}
+
+}
