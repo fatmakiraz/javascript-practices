@@ -1,0 +1,122 @@
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    font-size: var(--font-size);
+}
+
+.icon {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+.button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 100vh;
+    background: url("../img/hero.jpeg") center/cover no-repeat;
+    display: grid;
+    place-items: center;
+
+    &__card {
+        background-color: #FFF;
+        padding: 3.5em 3em;
+        width: 90vw;
+        display: grid;
+        place-items: center;
+        row-gap: 2.5em;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+
+        @include mq() {
+            width: 50vw;
+        }
+
+        &__title {
+            font-size: 3rem;
+            letter-spacing: var(--letter-spacing);
+            color: var(--color-primary);
+            text-align: center;
+
+            @include mq() {
+                font-size: 4rem;
+            }
+        }
+
+        &__button {
+            font-size: .875rem;
+            font-weight: var(--font-bold);
+            letter-spacing: var(--letter-spacing);
+            color: #FFF;
+            padding: .435em .875em;
+            background-color: var(--color-blue);
+            text-transform: uppercase;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+            border: 2px solid transparent;
+
+            &:hover {
+                background-color: #FFF;
+                color: var(--color-blue);
+                border: 2px solid var(--color-blue);
+            }
+        }
+
+    }
+}
+
+.modal {
+    background-color: rgba(73, 166, 233, 0.5);
+    display: none;
+    place-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &.modal-is-show {
+        display: grid;
+        z-index: 1;
+    }
+
+    &__card {
+        background-color: #FFF;
+        padding: 3.5em 3em;
+        width: 90vw;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        position: relative;
+
+        @include mq() {
+            width: 50vw;
+        }
+
+        &__content {
+            font-weight: var(--font-bold);
+            letter-spacing: var(--letter-spacing);
+            text-align: center;
+        }
+
+        &__icon {
+            position: absolute;
+            top: 2em;
+            right: 2em;
+            color: hsl(360, 67%, 44%);
+            cursor: pointer;
+            transition: var(--transition);
+
+            &:hover {
+                transform: scale(1.4);
+                color: hsl(360, 71%, 66%);
+            }
+        }
+    }
+}

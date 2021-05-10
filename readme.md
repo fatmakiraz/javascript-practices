@@ -8,6 +8,7 @@ These projects have been prepared from scratch after watching the [Build 15 Java
 3. Reviews
 4. Navbar
 5. Sidebar
+6. Modal
 
 > :warning: **All of the 15 projects will be made. This repository will be updated as the projects have been completed.**
 
