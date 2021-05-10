@@ -3,10 +3,11 @@
 These projects have been prepared from scratch after watching the [Build 15 JavaScript Projects - Vanilla JavaScript Course](https://www.youtube.com/watch?v=3PHXvlpOkf4) created by John Smilga.
 
 **Projects**
-- Color Flipper
-- Counter
-- Reviews
-- Navbar
+1. Color Flipper
+2. Counter
+3. Reviews
+4. Navbar
+5. Sidebar
 
 > :warning: **All of the 15 projects will be made. This repository will be updated as the projects have been completed.**
 
