@@ -1,0 +1,15 @@
+:root {
+	--font-family: 'Open Sans', sans-serif;
+    --font-family-secondary: 'Great Vibes', cursive;
+	--font-size: .9rem;
+	--color-primary: #102A42;
+	--color-bg: #F6FAFF;
+	--letter-spacing: .25rem;
+	--box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	--border-radius: 0.5rem;
+	--transition: linear .3s;
+
+    @include mq() {
+	--font-size: 1rem;
+    }
+}

@@ -1,0 +1,105 @@
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    font-size: var(--font-size);
+}
+
+.icon {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: #C59D5F;
+    transition: var(--transition);
+
+    &:hover {
+        transform: rotate(90deg);
+    }
+
+    &-minus {
+        display: none;
+    }
+
+    &-plus {
+        display: inline-block;
+    }
+}
+
+.button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.questions {
+    display: grid;
+    row-gap: 2em;
+    justify-items: center;
+    margin-top: 4em;
+
+    @include mq() {
+        row-gap: 4em;
+    }
+
+    &__title {
+        font-family: var(--font-family-secondary);
+        font-size: 2.5rem;
+        letter-spacing: var(--letter-spacing);
+        color: #C59D5F;
+    }
+
+    &__card {
+        padding: 1.5em;
+        background-color: #FFF;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        width: 80%;
+
+        @include mq() {
+            width: 60%;
+        }
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__title {
+                letter-spacing: var(--letter-spacing);
+            }
+
+            &__button {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        &__answer {
+            color: #617D98;
+            line-height: 1.5;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all .5s;
+        }
+
+        &.show-answer {
+            .questions__card__answer {
+                padding-top: 1em;
+                border-top: 1px solid rgba(#102A42, .2);
+                margin-top: 1em;
+                opacity: 1;
+                height: auto;
+            }
+
+            .icon-plus {
+                display: none;
+            }
+
+            .icon-minus {
+                display: inline-block;
+            }
+        }
+
+    }
+}
