@@ -374,8 +374,6 @@ body {
   transition: var(--transition); }
   .icon:hover {
     transform: rotate(90deg); }
-  .icon-minus {
-    display: none; }
 
 .button {
   background-color: transparent;
@@ -412,6 +410,8 @@ body {
       .questions__card__header__button {
         display: flex;
         align-items: center; }
+      .questions__card__header .icon-minus {
+        display: none; }
     .questions__card__answer {
       color: #617D98;
       line-height: 1.5;
