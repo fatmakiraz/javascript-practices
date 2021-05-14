@@ -9,6 +9,7 @@ These projects have been prepared from scratch after watching the [Build 15 Java
 4. Navbar
 5. Sidebar
 6. Modal
+7. Questions
 
 > :warning: **All of the 15 projects will be made. This repository will be updated as the projects have been completed.**
 
