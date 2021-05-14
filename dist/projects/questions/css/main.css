@@ -376,8 +376,6 @@ body {
     transform: rotate(90deg); }
   .icon-minus {
     display: none; }
-  .icon-plus {
-    display: inline-block; }
 
 .button {
   background-color: transparent;
