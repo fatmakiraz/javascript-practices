@@ -1,0 +1,244 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font: var(--font-size) var(--font-family);
+    color: var(--color-primary);
+}
+
+.icon {
+    display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    stroke-width: 0;
+    transition: var(--transition);
+
+    &-menu {
+        display: block;
+        fill: currentColor;
+
+        &:hover {
+            fill: var(--color-blue);
+        }
+
+        @include mq() {
+            display: none;
+        }
+    }
+
+    &-arrow-up {
+        width: 1.5em;
+        height: 1.5em;
+        fill: #FFF;
+    }
+}
+
+.button {
+    background: transparent;
+    cursor: pointer;
+}
+
+.container {
+    padding: 1em;
+
+    @include mq() {
+        padding: 1em 1.5em;
+    }
+}
+
+.section--hero {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)), url("../img/hero.jpeg") center/cover no-repeat;
+}
+
+.section {
+    min-height: 100vh;
+
+    &--global {
+        &__title {
+            font-size: 2.5rem;
+            text-align: center;
+            letter-spacing: var(--letter-spacing);
+            font-weight: var(--font-bold);
+            text-transform: uppercase;
+
+            &--blue {
+                color: var(--color-blue);
+            }
+        }
+    }
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFF;
+    transition: var(--transition);
+
+    @include mq() {
+        background-color: transparent;
+    }
+
+    &.js-showHeader {
+        position: fixed;
+        background-color: #FFF;
+
+        .header__nav__link {
+            color: var(--color-primary);
+        }
+    }
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        /*&.js-menuShow {
+            .header__nav {
+                top: 100%;
+                transform: translateY(0);
+            }
+        }*/
+    }
+
+    &__logo {
+        height: 50px;
+
+        img {
+            max-height: 100%;
+        }
+    }
+
+    &__nav-wrapper {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        transition: var(--transition);
+        height: 0;
+        overflow: hidden;
+
+        @include mq() {
+            position: static;
+            width: unset;
+            height: unset;         
+            overflow: visible;
+        }
+    }
+
+    &__nav {
+        background-color: #FFF;
+        padding-left: 1.5em;
+        padding-bottom: 2em;
+        display: grid;
+        row-gap: 2em;
+        //transform: translateY(-100%);
+        //transition: var(--transition);
+
+        @include mq() {
+            background-color: transparent;
+            padding-bottom: unset;
+            padding-left: unset;
+            grid-template-columns: repeat(4, 1fr);
+            row-gap: unset;
+            column-gap: .5em;
+            justify-items: center;
+        }
+
+        &__link {
+            font-size: 1.125rem;
+            letter-spacing: var(--letter-spacing);
+            cursor: pointer;
+            transition: var(--transition);
+
+            @include mq() {
+                color: #FFF;
+            }
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFF;
+    text-align: center;
+
+    &__title {
+        font-size: 3rem;
+        font-weight: var(--font-bold);
+        text-transform: uppercase;
+        margin-bottom: .187em;
+
+        @include mq() {
+            font-size: 4rem;
+        }
+    }
+
+    &__subtitle {
+        line-height: 1.5;
+        margin-bottom: 1.25em;
+        max-width: 80%;
+    }
+
+    &__cta {
+        font-size: .875rem;
+        letter-spacing: var(--letter-spacing);
+        text-transform: uppercase;
+        padding: .571em 1.15em;
+        border: 2px solid #FFF;
+    }
+}
+
+.scroll-section {
+    position: fixed;
+    bottom: 3em;
+    right: 3em;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    place-items: center;
+    background-color: var(--color-blue);
+    border-radius: var(--border-radius);
+    animation: bounce 2s ease-in-out infinite;
+    display: none;
+
+    &.js-showScrollBtn {
+        @include mq() {
+            display: grid;
+        }
+    }
+
+    &:hover {
+        opacity: .9;
+    }
+
+    @keyframes bounce {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.25);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+}
+
+.footer {
+    text-align: center;
+    color: #FFF;
+    letter-spacing: var(--letter-spacing);
+    background-color: var(--color-primary);
+    padding: 5em 1em;
+}
