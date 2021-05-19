@@ -1,0 +1,136 @@
+body {
+    font: var(--font-size) var(--font-family);
+}
+
+.preloader {
+    background-color: #FFF;
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    visibility: visible;
+    z-index: 3;
+
+    &.js-hidePreloader {
+        visibility: hidden;
+        z-index: -3;
+    }
+}
+
+.hero {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    &::before {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+    }
+
+    &__video-wrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: var(--font-bold);
+        letter-spacing: var(--letter-spacing);
+        color: #FFF;
+        text-align: center;
+    }
+
+    &__buttons-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__button-video-wrapper {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: .4em;
+        background-color: var(--color-bg);
+        border-radius: var(--border-radius);
+        padding: .65em .25em;
+
+        @include mq() {
+            padding: .675em .75em;
+            column-gap: .5em;
+        }
+    }
+
+    &__button-number-wrapper {
+        display: flex;
+        
+    }
+
+    &__button {
+        cursor: pointer;
+        color: var(--color-blue);
+
+        &--current {
+            background-color: var(--color-blue);
+            min-height: 100%;
+            min-width: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+
+            &.js-videoPause {
+                left: 50%;
+            }
+
+            &.js-videoPlay {
+            left: 0;
+            }
+        }
+    }
+
+    &__button-number {
+        cursor: pointer;
+        color: var(--color-blue);
+        font-weight: var(--font-bold);
+        border-radius: var(--border-radius);
+        border: 1px solid var(--color-blue);
+        background-color: var(--color-blue);
+        color: #FFF;
+        transition: var(--transition);
+        padding: .65em .25em;
+        min-width: 2.25em;
+
+        @include mq() {
+            padding: .675em 1em;
+        }
+
+        &:hover {
+            border: 1px solid #FFF;
+        }
+
+        &--value {
+            background-color: var(--color-bg);
+            color: var(--color-blue);
+            width: 80px;
+            text-align: center;
+        }
+
+        & + & {
+            margin-left: 1.5em;
+        }
+    }
+}
