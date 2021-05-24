@@ -1,0 +1,102 @@
+body {
+    font: var(--font-size) var(--font-family);
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+}
+
+.hero {
+    padding: 5em 1em;
+
+    &__info {
+        margin-bottom: 4em;
+        text-align: center;
+
+        &__title {
+            font-size: 2.5rem;
+            letter-spacing: var(--letter-spacing);
+            margin-bottom: .3em;
+        }
+
+        &__desc {
+            color: var(--color-grey);
+        }
+    }
+
+    &-grid {
+        display: grid;
+        row-gap: 2em;
+
+        @include mq() {
+            row-gap: unset;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2em;
+        }
+    }
+
+    &__image {
+        height: 320px;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+            border-radius: var(--border-radius);
+
+        }
+    }
+
+    &__tabs {
+        background-color: #FFF;
+        border-radius: var(--border-radius);
+
+        &.js-showContent {
+            .hero__tabs__content {
+                display: block;
+            }
+        }
+
+        &__btn-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &__btn {
+            font-weight: var(--font-bold);
+            padding-top: 1em;
+            padding-bottom: 1em;
+            background-color: #DAE2EC;
+            letter-spacing: var(--letter-spacing);
+            cursor: pointer;
+            transition: var(--transition);
+
+            &:not(.active):hover {
+                background-color: hsl(205, 100%, 96%);
+                color: #49a6e9;
+            }
+
+            &.active {
+                background-color: transparent;
+            }
+        }
+
+        &__content {
+            padding: 2em 1.5em;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            &__title {
+                font-weight: var(--font-bold);
+                margin-bottom: .875em;
+                letter-spacing: var(--letter-spacing);
+            }
+
+            &__desc {
+                line-height: 1.5;
+                color: var(--color-grey);
+            }
+        }
+    }
+}
