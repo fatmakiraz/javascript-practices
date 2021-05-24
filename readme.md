@@ -12,7 +12,7 @@ These projects have been prepared from scratch after watching the [Build 15 Java
 7. Questions
 8. Menu
 9. Video- Preloader
-10. Scroll- Mobile Menu Toggle with Dynamic Height, Fixed Header, Scroll Top Button, Smooth Section Scroll, Current Time
+10. Scroll- Mobile Menu Toggle with Dynamic Height, Fixed Header, Scroll Top Button, Smooth Section Scroll, Current Time on Footer
 11. Tabs
 
 > :warning: **All of the 15 projects will be made. This repository will be updated as the projects have been completed.**
