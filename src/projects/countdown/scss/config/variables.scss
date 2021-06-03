@@ -1,0 +1,14 @@
+:root {
+	--font-family: 'Roboto', sans-serif;
+	--font-family-secondary: 'Open Sans', sans-serif;
+	--font-size: .88rem;
+    --font-bold: 700;
+	--color-grey: #617D98;
+	--color-primary: #102A42;
+	--color-bg: hsl(206, 33%, 96%);
+	--letter-spacing: .25rem;
+
+    @include mq() {
+        --font-size: 1rem;
+    }
+}
