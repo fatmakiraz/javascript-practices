@@ -22,6 +22,7 @@ form.addEventListener('submit', ((e) => {
 
     if(isNaN(value ) || value <=0 || value >9) {
         content.innerHTML = `<p class= "lorem__content">${text[random]}</p>`
+        alert('Please add a number between 1-9!')
     } 
 
     else {
