@@ -1,0 +1,20 @@
+:root {
+	--font-family: 'Roboto', sans-serif;
+	--font-family-secondary: 'Open Sans', sans-serif;
+	--font-size: .88rem;
+	--font-medium: 500;
+	--font-bold: 700;
+	--letter-spacing: .25rem;
+	--color-blue: #a5d5f8;
+	--color-primary: #102A42;
+	--color-bg: hsl(206, 33%, 96%);
+	--box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	--box-shadow--dark: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--border-radius: 0.5rem;
+	--max-width: 620px;
+	--transition: linear .3s;
+
+	@include mq() {
+		--font-size: 1rem;
+	}
+}

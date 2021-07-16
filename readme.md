@@ -16,6 +16,7 @@ These projects have been prepared from scratch after watching the [Build 15 Java
 11. Tabs
 12. Countdown
 13. Lorem Ipsum Generator
+13. Todo App-Grocery Bud
 
 > :warning: **All of the 15 projects will be made. This repository will be updated as the projects have been completed.**
 

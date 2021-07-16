@@ -1,0 +1,163 @@
+body {
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	background-color: var(--color-bg);
+	color: var(--color-primary);
+	letter-spacing: var(--letter-spacing);
+}
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+	transition: var(--transition);
+	cursor: pointer;
+
+	&-edit {
+		color: #6be676;
+
+		&:hover {
+			color: #25bb32;
+		}
+	}
+
+	&-remove {
+		color: #e76b6c;
+
+		&:hover {
+			color: #bb2525;
+		}
+	}
+}
+
+.button {
+	background-color: transparent;
+	cursor: pointer;
+	letter-spacing: var(--letter-spacing);
+}
+
+.grocery {
+	padding: 1.5rem;
+	margin-top: 6rem;
+	background-color: #FFF;
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	max-width: 90vw;
+	margin-left: auto;
+	margin-right: auto;
+	transition: var(--transition);
+
+	@include mq()   {
+		padding: 2.5rem 2rem;
+	max-width: 75vw;
+	}
+
+	&:hover {
+		box-shadow: var(--box-shadow--dark);
+	}
+
+	&__alert {
+		margin-bottom: 1rem;
+		padding: .5rem;
+		text-align: center;
+
+		&--danger {
+			color: #721c24;
+			background-color: #F8D7DA;
+		}
+
+		&--success {
+			color: #155724;
+			background-color: #D4EDDA;
+		}
+
+	}
+
+	&__title {
+		font-size: 1.25rem;
+		margin-bottom: 1.5rem;
+		font-weight: var(--font-bold);
+		text-align: center;
+	}
+
+	&__form {
+		display: flex;
+		justify-content: center;
+
+		&__input {
+			font-size: 1rem;
+			background-color: #f1f5f8;
+			padding: .5rem;
+			border-color: transparent;
+			border-top-left-radius: var(--border-radius);
+			border-bottom-left-radius: var(--border-radius);
+			color: #617d98;
+			flex-grow: 1;
+
+			@include mq()   {
+				padding: .25rem 1rem;
+			}
+		}
+
+		&__button {
+			font-weight: var(--font-medium);
+			background-color: var(--color-blue);
+			text-transform: capitalize;
+			padding: .5rem;
+			border-top-right-radius: var(--border-radius);
+			border-bottom-right-radius: var(--border-radius);
+
+			@include mq()   {
+				padding: .25rem 1rem;
+			}
+		}
+	}
+
+	&-bottom {
+		margin-top: 2rem;
+		display: none;
+
+		&.is-show {
+			display: block;
+		}
+	}
+
+	&__item-wrapper {
+		margin-bottom: 1.25rem;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+
+		&__name {
+			text-transform: capitalize;
+		}
+
+		&__action {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: .5rem;
+		}
+
+		&__button {
+			color: #e76b6c;
+			font-weight: var(--font-medium);
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			transition: var(--transition);
+
+			&:hover {
+				color: #bb2525;
+			}
+		}
+
+		&+& {
+			margin-top: .75rem;
+		}
+	}
+}
