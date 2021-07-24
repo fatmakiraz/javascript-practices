@@ -1,0 +1,101 @@
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    line-height: var(--line-height);
+}
+
+img:not(.person-image) {
+    width: 100%;
+}
+
+.person-image {
+    border-radius: 50%;
+    max-width: 6rem;
+    max-height: 6rem;
+    margin: 0 auto 1rem;
+}
+
+
+.slider {
+    margin-top: 4rem;
+
+    &-item-container {
+        width: 80vw;
+        height: 45vh;
+        max-width: 80rem;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        border: 5px solid var(--color-blue);
+        border-radius: var(--border-radius);
+        position: relative;
+
+        @include mq() {
+            height: 55vh;
+        }
+    }
+
+    &__item {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #C5E5FC;
+        color: #FFF;
+        display: grid;
+        place-items: center;
+        transition: all 0.25s ease-in-out;
+        text-align: center;
+
+        &:nth-child(1) .slider__item__number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &:nth-child(3) {
+            background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url("../img/food-2.jpeg") center / cover no-repeat;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &__name {
+            font-weight: var(--font-bold);
+            letter-spacing: var(--letter-spacing);
+            margin-bottom: .75rem;
+        }
+
+        &__number {
+            font-weight: var(--font-bold);
+            font-size: 5rem;
+            margin-bottom: .75rem;
+        }
+    }
+
+    &-button-container {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button {
+        background: transparent;
+        border-color: transparent;
+        font-size: 1.75rem;
+        cursor: pointer;
+        margin: 0 .5rem;
+        text-transform: capitalize;
+        letter-spacing: var(--letter-spacing);
+        color: #617d98;
+        transition: var(--transition);
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
